@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="org.syriancarrot.hellovr.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="72dp">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="16dp"
+                android:src="@drawable/dhp_logo" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="FOV %"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/fov"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:ems="3"
+                    android:inputType="number"
+                    android:text="100" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fov"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Brightness"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/brightness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:ems="3"
+                    android:inputType="numberDecimal"
+                    android:text="1.0" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/brightness"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="BlindSpot Size"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="3"
+                    android:inputType="numberDecimal"
+                    android:text="0"
+                    android:layout_alignBaseline="@id/textView3"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"/>
+
+                <TextView
+                    android:id="@+id/bspot_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/size"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:text="BlindSpot (x,y)"/>
+
+                <EditText
+                    android:id="@+id/pos_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/bspot_textView"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:ems="3"
+                    android:inputType="numberDecimal"
+                    android:text="0.25" />
+
+                <EditText
+                    android:id="@+id/pos_x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/bspot_textView"
+                    android:layout_toStartOf="@id/pos_y"
+                    android:ems="3"
+                    android:inputType="numberDecimal"
+                    android:text="0.1" />
+
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pos_x"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Offset (x,y)"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/off_y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/textView4"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:ems="3"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:text="0.25" />
+
+                <EditText
+                    android:id="@+id/off_x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/textView4"
+                    android:layout_toStartOf="@id/off_y"
+                    android:ems="3"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:text="0.5" />
+
+
+
+
+                <!--<Button-->
+                    <!--android:id="@+id/start"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@id/off_x"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginBottom="70dp"-->
+                    <!--android:text="Start" />-->
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/ic_google_cardboard_white_48dp"
+        android:layout_margin="16dp"
+
+        app:backgroundTint="@color/accent"/>
+
+</android.support.design.widget.CoordinatorLayout>
